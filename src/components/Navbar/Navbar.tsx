@@ -3,20 +3,20 @@ let NavbarRightLogo = require('../../assets/logo/image.png');
 
 export const Navbar = () => {
     return (
-        <div className="fixed top-0 left-0 w-full h-28 shadow-md z-50 bg-white">
-            <div className="max-w-[1920px] mx-auto px-4 sm:px-8 lg:px-10 flex justify-between items-center h-full">
+        <div className="bg-white mb-1 relative shadow-md z-10">
+            <div className="container mx-auto flex items-center justify-between py-3 px-4">
                 <div className="flex flex-shrink-0 items-center">
                     <img
                         alt="hyundai_logo"
                         src={logo}
-                        className="h-[30px] md:h-[30px]  w-auto"
+                        className="w-[150px] md:w-[200px] h-auto"
                     />
                 </div>
                 <div className='flex flex-shrink-0'>
                     <img
                         alt="Your Company"
                         src={NavbarRightLogo}
-                        className=" h-[30xp] md:h-[60px] w-auto"
+                        className="md:w-[52px] h-auto"
                     />
                 </div>
             </div>

@@ -1,53 +1,57 @@
 import { FaArrowRight } from "react-icons/fa6";
 
-let featuredImage = require('../../assets/images/FeaturedImage.png');
-
+let featuredImage = require('../../assets/images/FeaturedImage.jpg');
 
 export const HeroSection = () => {
     return (
-        <div className="max-w-[1920px] mx-auto px-4 sm:px-8 lg:px-10 mt-8">
-            <div className="flex flex-1 md:flex-col lg:flex-row items-center justify-between lg:items-start">
-
-                <div className="my-8 pt-[6.5rem] pr-4 w-full lg:w-1/2 ">
-                    <div className='py-2'>
-                        <span className="bg-[#F0F0F0] text-slate-900 h-[49px] w-[80px] p-2 font-bold rounded-md inline-block mb-4 text-center text-xs md:text-sm lg:text-base">
-                            NIEUW
-                        </span>
-                        <h1 className="text-[28px] sm:text-[36px] md:text-[42px] lg:text-[50px] xl:text-[60px] font-bold leading-[36px] sm:leading-[45px] md:leading-[50px] lg:leading-[60px] xl:leading-[70px] text-[#002E6B] mb-4">
-                            De vernieuwde Hyundai i10
-                        </h1>
-                        <h2 className="text-[18px] sm:text-[24px] md:text-[28px] lg:text-[34px] xl:text-[42px] font-bold leading-[24px] sm:leading-[30px] md:leading-[35px] lg:leading-[40px] xl:leading-[50px] text-[#002E6B] mb-4">
-                            Maak een groots statement
-                        </h2>
+        <div className="relative lg:mb-40">
+            <div className="bg-white overflow-hidden">
+                <div className="container lg:px-8">
+                    <div className="flex flex-col lg:flex-row items-center lg:items-start">
+                        {/* Text Section */}
+                        <div className="py-12 px-4 lg:py-20 flex flex-col justify-around lg:w-1/2 z-10">
+                            <div>
+                                <span className="bg-gray-200 text-slate-900 px-4 py-2 font-bold rounded-md inline-block mb-4 text-center text-xs sm:text-sm lg:text-base">
+                                    NIEUW
+                                </span>
+                                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-[#002e6b] mb-4">
+                                    De vernieuwde Hyundai i10
+                                </h1>
+                                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight text-[#002e6b] mb-4">
+                                    Maak een groots statement
+                                </h2>
+                                <p className="mt-6 text-gray-800 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+                                    Profiteer nu van een zeer scherpe aanbieding op
+                                    <br />
+                                    de rijk uitgeruste i10 Comfort.
+                                    <br />
+                                    <b>Je stapt al in vanaf €275 per maand*</b>
+                                </p>
+                            </div>
+                            <div className='z-50 lg:absolute lg:-bottom-20 lg:mt-16 flex flex-col sm:flex-row justify-between items-center shadow-md px-6 py-4 bg-white rounded-md border border-gray-300'>
+                                <div className="w-full sm:w-1/2 flex">
+                                    <h1 className='text-base sm:text-lg lg:text-xl font-bold text-gray-800 mb-4'>
+                                        Private Lease nu tijdelijk vanaf €275 p/m*
+                                    </h1>
+                                </div>
+                                <div className="w-full sm:w-1/2 flex justify-center sm:justify-end mt-4 sm:mt-0">
+                                    <button className='flex items-center bg-[#002e6b] text-white px-5 py-3 rounded-md font-bold hover:bg-blue-800 transition duration-300'>
+                                        Vraag offerte aan
+                                        <FaArrowRight className='ml-2 transform transition-transform duration-300' />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        {/* Image Section */}
+                        <div className="lg:absolute lg:top-0 lg:right-0 w-full lg:w-1/2 flex justify-center lg:justify-end mt-8 lg:mt-0">
+                            <img
+                                src={featuredImage}
+                                alt="Featured"
+                                className="w-full h-auto lg:h-[650px] lg:max-w-none lg:rounded-bl-[100px] "
+                                style={{ marginRight: '0', marginTop: '0' }} // Ensure no margin
+                            />
+                        </div>
                     </div>
-                    <div className='py-8 xl:py-14'>
-                        <h1 className="font-semibold text-slate-900 mb-2 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px]">
-                            Profiteer nu van een zeer scherpe aanbieding op de rijk uitgeruste i10 Comfort
-                        </h1>
-                        <h1 className="font-bold text-slate-900 text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px]">
-                            Je stapt al in vanaf €275 per maand*
-                        </h1>
-                    </div>
-
-                    <div className='xl:mt-20 mt-10 w-1/2 absolute py-6 flex flex-col sm:flex-row justify-between items-center shadow-2xl p-4 z-50 bg-white rounded-lg border'>
-                        <h1 className='w-full sm:w-2/3 text-wrap font-bold text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-2xl text-gray-800 mb-4 sm:mb-0'>
-                            Private Lease nu tijdelijk vanaf €275 p/m*
-                        </h1>
-                        <button className='flex items-center bg-[#002E6B] text-white px-6 py-3 rounded-lg font-bold hover:bg-[#003b8e] transition duration-300'>
-                            Vraag offerte aan
-                            <FaArrowRight className='ml-2 transform group-hover:translate-x-1 transition duration-300' />
-                        </button>
-                    </div>
-
-                </div>
-
-                <div className="w-full lg:w-1/2 absolute -top-4 right-0 -z-10">
-                    <img
-                        src={featuredImage}
-                        alt="Featured"
-                        className="h-[900px] xl:h-[1250px] w-auto "
-                    />
-
                 </div>
             </div>
         </div>

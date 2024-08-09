@@ -4,9 +4,6 @@ import { HeroSection } from '../HeroSection/HeroSection'
 
 export const HeaderSection = () => {
   return (
-    <div className=''>
-        <Navbar />
-        <HeroSection />
-    </div>
+   <h1></h1>
   )
 }
